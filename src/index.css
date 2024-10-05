@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Quattrocento:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-coral: #E9BCAB;
+  --color-text: #6D4C41;
+  --color-accent-1: #F8B195;
+  --color-accent-2: #F67280;
+  --color-accent-3: #C06C84;
+  --color-accent-4: #6C5B7B;
+  --color-accent-5: #355C7D;
+  --color-background-dark: #1a202c;
+  --color-background-light: #f7fafc;
+  --color-text-dark: #e2e8f0;
+  --color-text-light: #2d3748;
+}
+
+.dark {
+  --color-background: var(--color-background-dark);
+  --color-text: var(--color-text-dark);
+}
+
+.light {
+  --color-background: var(--color-background-light);
+  --color-text: var(--color-text-light);
+}
+
+body {
+  @apply bg-[var(--color-background)] text-[var(--color-text)] font-quattrocento text-sm;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-oswald;
+}
+
+.pane {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.pane-expanded {
+  @apply w-full;
+}
+
+.pane-collapsed {
+  @apply w-0 overflow-hidden;
+}
+
+.editor-field {
+  @apply bg-gray-800 text-white;
+}
+
+/* Improved spacing and sizing */
+.btn-icon {
+  @apply p-1.5 hover:bg-gray-700 rounded;
+}
+
+.btn-icon svg {
+  @apply w-4 h-4;
+}
+
+.input-select {
+  @apply text-xs bg-gray-700 border border-gray-600 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-accent3;
+}
+
+.chat-message {
+  @apply text-sm mb-2 p-2 rounded-lg;
+}
+
+.outline-item {
+  @apply text-sm bg-gray-700 rounded-lg shadow p-3 mb-2;
+}
+
+.outline-item-title {
+  @apply text-base font-semibold bg-transparent focus:outline-none focus:ring-1 focus:ring-accent3 rounded px-2 py-0.5;
+}
+
+.outline-item-content {
+  @apply w-full h-20 p-2 bg-gray-600 rounded focus:outline-none focus:ring-1 focus:ring-accent3 text-sm;
+}
